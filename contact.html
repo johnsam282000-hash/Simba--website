@@ -1,0 +1,62 @@
+< button onclick="document.body.classList.toggle('light')">Toggle Light</button><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Simba's World 👑</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.6; transition: 0.3s; }
+    body.light { background: #f8fafc; color: #1e293b; }
+    nav { position: fixed; top: 0; width: 100%; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); padding: 1rem; display: flex; justify-content: space-between; align-items: center; z-index: 100; }
+    nav div { display: flex; align-items: center; gap: 10px; }
+    body.light nav { background: rgba(248, 250, 252, 0.8); }
+    nav h1 { color: #38bdf8; }
+    nav a { color: #38bdf8; text-decoration: none; margin-right: 15px; font-weight: bold; font-size: 14px; }
+    nav a:hover { border-bottom: 2px solid #38bdf8; }
+    nav button { background: #38bdf8; border: none; padding: 0.5rem 1rem; border-radius: 8px; color: #0f172a; font-weight: bold; cursor: pointer; }
+    section { padding: 120px 20px 60px; max-width: 600px; margin: auto; text-align: center; }
+    section h2 { font-size: 2rem; margin-bottom: 1rem; color: #38bdf8; }
+    .contact-btn { display: inline-block; background: #38bdf8; color: #0f172a; padding: 15px 30px; border-radius: 12px; text-decoration: none; font-weight: bold; margin: 10px; font-size: 18px; }
+    .contact-btn:hover { transform: translateY(-3px); }
+    footer { text-align: center; padding: 2rem; background: #1e293b; margin-top: 2rem; }
+    body.light footer { background: #e2e8f0; }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>Simba 👑</h1>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a> 
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <button onclick="toggleTheme()">Toggle Light</button>
+    </div>
+  </nav>
+
+  <section id="contact">
+    <h2>Let's Work Together</h2>
+    <p>Need a website? Let's talk 🔥</p>
+    
+    <a href="https://wa.me/233532080174" class="contact-btn">💬 WhatsApp Me</a>
+    <a href="mailto:johnsam282000@email.com" class="contact-btn">📧 Email Me</a>
+    
+    <p style="margin-top: 30px;">Based in Accra, Ghana 🇬🇭</p>
+  </section>
+
+  <footer>
+    <p>Made with ❤️ by Simba | 2026</p>
+  </footer>
+  
+  <script>
+  function toggleTheme() {
+    document.body.classList.toggle('light');
+    localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+  }
+  if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light');
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!-- This makes sure it always finds files in the same folder -->
+<base href="./">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Simba's World 👑</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.6; transition: 0.3s; }
+    body.light { background: #f8fafc; color: #1e293b; }
+    nav { position: fixed; top: 0; width: 100%; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); padding: 1rem; display: flex; justify-content: space-between; align-items: center; z-index: 100; }
+    body.light nav { background: rgba(248, 250, 252, 0.8); }
+    nav h1 { color: #38bdf8; }
+    nav a { color: #38bdf8; text-decoration: none; margin-right: 20px; font-weight: bold; }
+    nav a:hover { border-bottom: 2px solid #38bdf8; }
+    nav button { background: #38bdf8; border: none; padding: 0.5rem 1rem; border-radius: 8px; color: #0f172a; font-weight: bold; cursor: pointer; }
+    section { padding: 120px 20px 60px; max-width: 900px; margin: auto; text-align: center; }
+    section h2 { font-size: 2rem; margin-bottom: 1rem; color: #38bdf8; }
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 2rem; }
+    .card { background: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #334155; opacity: 0; transform: translateY(30px); animation: fadeUp 1s forwards; }
+    body.light .card { background: #fff; border: 1px solid #e2e8f0; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.3s; }
+    .card:nth-child(3) { animation-delay: 0.5s; }
+    .card:hover { transform: translateY(-5px); border-color: #38bdf8; }
+    footer { text-align: center; padding: 2rem; background: #1e293b; margin-top: 2rem; }
+    body.light footer { background: #e2e8f0; }
+nav div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+nav a {
+  font-size: 14px; /* smaller on mobile */
+}
+
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>Simba 👑</h1>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a> 
+      <a href="projects.html">Projects</a>
+     <a href="contact.html">Contact</a> 
+      <button onclick="toggleTheme()">Toggle Light</button>
+    </div>
+  </nav>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="card"><h3>Project 1</h3><p>My first website</p></div>
+      <div class="card"><h3>Project 2</h3><p>Dark/Light Mode Toggle</p></div>
+      <div class="card"><h3>Project 3</h3><p>Animated Cards</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made with ❤️ by Simba | 2026</p>
+  </footer>
+<script>
+function toggleTheme() {
+  document.body.classList.toggle('light');
+  localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+}
+
+// Load saved theme when page opens
+if (localStorage.getItem('theme') === 'light') {
+  document.body.classList.add('light');
+}
+</script>
+<script>
+function toggleTheme() {
+  document.body.classList.toggle('light');
+  localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+}
+if (localStorage.getItem('theme') === 'light') {
+  document.body.classList.add('light');
+}
+</script>
+</body>
+</html>
