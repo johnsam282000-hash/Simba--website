@@ -59,7 +59,45 @@
       transition: transform 0.3s;
     }
     .hero-btn:hover { transform: scale(1.05); }
+    .skills-section {
+      padding: 60px 20px;
+      background: white;
+      text-align: center;
+    }
     
+    .skills-section h2 {
+      color: #4CAF50;
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+    
+    .skills-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .skill-card {
+      background: #f4f4f4;
+      border-radius: 15px;
+      padding: 30px 20px;
+      width: 250px;
+      border-top: 4px solid #4CAF50;
+      transition: transform 0.3s;
+    }
+    
+    .skill-card:hover {
+      transform: translateY(-10px);
+      background: #e8f5e9;
+    }
+    
+    .skill-card h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 <body>
@@ -78,6 +116,27 @@
     <p>Web Developer | Alpha Mindset</p>
     <a href="contact.html" class="hero-btn">Hire Me</a>
   </div>
+<!-- SKILLS SECTION -->
+  <div class="skills-section">
+    <h2>What I Do</h2>
+    <div class="skills-grid">
+      
+      <div class="skill-card">
+        <h3>HTML5</h3>
+        <p>Clean, structured websites from scratch. Mobile friendly.</p>
+      </div>
+      
+      <div class="skill-card">
+        <h3>CSS3</h3>
+        <p>Beautiful designs, green branding, hover effects, pro layouts.</p>
+      </div>
+      
+      <div class="skill-card">
+        <h3>WhatsApp Integration</h3>
+        <p>Direct contact buttons so clients can reach you in 1 click.</p>
+      </div>
 
+    </div>
+  </div>
 </body>
 </html>
