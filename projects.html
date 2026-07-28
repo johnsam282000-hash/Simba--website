@@ -14,6 +14,7 @@
     h1 { color: #4CAF50; } /* Lion Green */
     nav { margin-bottom: 30px; }
     nav a { margin: 0 10px; text-decoration: none; color: #333; font-weight: bold; }
+    nav a:hover { color: #4CAF50; }
     
     .project-grid {
       display: flex;
@@ -34,11 +35,20 @@
     }
     .project-card:hover { transform: translateY(-5px); }
     
+    /* NEW CSS FOR simba-site.jpg */
     .project-card img {
       width: 100%;
       border-radius: 10px;
       height: 180px;
-      object-fit: cover;
+      object-fit: cover; /* keeps image from stretching */
+      border: 3px solid #4CAF50; /* Lion Green border */
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card img:hover {
+      transform: scale(1.03); /* zoom in a little */
+      box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4); /* green glow */
     }
     
     .btn {
@@ -49,7 +59,10 @@
       text-decoration: none;
       border-radius: 25px;
       margin-top: 10px;
+      font-weight: bold;
+      transition: background 0.3s;
     }
+    .btn:hover { background: #45a049; }
   </style>
 </head>
 <body>
@@ -62,24 +75,26 @@
   </nav>
 
   <h1>My Projects 👑</h1>
-  <p>Here are some things I've built</p>
+  <p>Websites I've built with HTML & CSS</p>
   
   <div class="project-grid">
     
-    <!-- PROJECT 1 -->
+    <!-- PROJECT 1: YOUR WEBSITE -->
     <div class="project-card">
-      <img src="project1.jpg" alt="Project 1">
-      <h3>Simba Website</h3>
-      <p>My first portfolio website built with HTML & CSS. Hosted on GitHub Pages.</p>
-      <a href="https://johnsam282000-hash.github.io/Simba--website/" class="btn">View Live</a>
+      <img src="simba-site.jpg" alt="Simba Website Screenshot">
+      <h3>Simba Portfolio Website</h3>
+      <p>A responsive portfolio website built from scratch with HTML & CSS. 
+      Features: Profile section, Contact page with WhatsApp, Mobile friendly design. 
+      Hosted on GitHub Pages.</p>
+      <a href="https://johnsam282000-hash.github.io/Simba--website/" class="btn" target="_blank">View Live Site</a>
     </div>
     
-    <!-- PROJECT 2 - COPY THIS BLOCK TO ADD MORE -->
+    <!-- PROJECT 2: PLACEHOLDER FOR NEXT ONE -->
     <div class="project-card">
-      <img src="project2.jpg" alt="Project 2">
-      <h3>Project Name</h3>
-      <p>Describe what this project does. What did you learn?</p>
-      <a href="#" class="btn">View Project</a>
+      <img src="coming-soon.jpg" alt="Coming Soon">
+      <h3>Next Project</h3>
+      <p>Working on something new. Check back soon!</p>
+      <a href="contact.html" class="btn">Hire Me</a>
     </div>
 
   </div>
